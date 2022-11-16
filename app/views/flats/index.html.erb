@@ -1,0 +1,17 @@
+<div class="container-fluid container py-3 mt-4">
+  <h1 class="h3">Flats</h1>
+  <div class="row mt-4">
+    <% @flats.each do |flat| %>
+        <div class="col-md-3">
+            <div class="card mb-3">
+                <img src="https://source.unsplash.com/random/?house"<% (1..5).to_a.sample%> class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><%= flat.name  %></h5>
+                    <p class="card-text"><%= flat.address  %></p>
+                    <p class="card-text"><small class="text-muted"><%= flat.price_per_night  %>€ per night</small></p>
+                </div>
+            </div>
+        </div>
+    <% end %>
+  </div>
+</div>
